@@ -1,5 +1,4 @@
-import { FaRegUser } from "react-icons/fa6";
-import { FaUserGroup } from "react-icons/fa6";
+
 import { FcCdLogo } from "react-icons/fc";
 import logo  from './image.jpg'
 export default function Form01(){
@@ -24,7 +23,7 @@ export default function Form01(){
                         
                       </div>
 
-                       <div div className=" border-b">
+                       <div className=" border-b">
                           <input type="text" placeholder="Job title" className="w-full p-3 appearance-none bg-transparent border-none" />  
                        </div > 
                        <div className="border-b">
@@ -53,7 +52,7 @@ export default function Form01(){
                     />
                     
                     <div className="absolute inset-0 bg-gradient-to- flex justify-around ">
-                        <div flex justify-around>
+                        <div className="flex justify-around">
                             <h3>
                                 <FcCdLogo/>
                                   Logo
