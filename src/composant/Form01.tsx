@@ -1,10 +1,16 @@
 
 import { FcCdLogo } from "react-icons/fc";
 import logo  from './image.jpg'
+import { FormApp } from './FormApp'
+
+
+
+
 export default function Form01(){
-    return(
-        
-              <div className="flex min-h-screen items-center justify-center bg-gray-100 p-6">
+
+
+    return  (
+      <div className="flex min-h-screen items-center justify-center bg-gray-100 p-6">
                 <div className="flex w-full max-w-4xl bg-white rounded-lg shadow-lg overflow-hidden">
                   {/* Form Section */}
                   <div className="flex flex-col w-1/2 p-8">
@@ -39,6 +45,8 @@ export default function Form01(){
 
                      
                     </form>
+                    {/* FormApp Section */}
+                    <FormApp />
                   </div>
 
                   {/* Image Section */}
@@ -73,11 +81,12 @@ export default function Form01(){
                         <div>
                             Openvertus
                         </div>
-                  
                     </div>
           </div>
              </div>
            </div>
          </div> 
     )
+    
+
 }
