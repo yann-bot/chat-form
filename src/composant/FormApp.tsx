@@ -13,26 +13,26 @@ import { ButtonIcon } from "./Form"
 
     return (
         <div >
-        <div>
+               <h2 className="font-bold mt-8 mb-2">Number of employees</h2>
+        <div className="flex flex-col gap-3">
                 {/*Button 1 */}
             <ButtonIcon 
             icon={<GoPerson />} 
             title="I'm a solo creator" 
             paragraph="I need to set up an account for myself." 
-            onClick={() => handleButton('Button 1 clique !')}
-            />
+           />
 
             {/*Button 2 */}
             <ButtonIcon 
             icon={<AiOutlineTeam />} 
             title="I'm part of a team"
             paragraph="I need to set up an account for a team"
-            onClick={() => handleButton("Button 2 clique !")}
+           
             />
 
             {/*Button de validation  */}
 
-            <button onClick={handleValidation}>Get in touch</button>
+            <button className="border rounded-md mt-6 text-white pt-2 pb-2 bg-blue-600">Get in touch</button>
         </div>
         </div>
     )

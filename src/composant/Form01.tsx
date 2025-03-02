@@ -11,40 +11,35 @@ export default function Form01(){
 
     return  (
       <div className="flex min-h-screen items-center justify-center bg-gray-100 p-6">
-                <div className="flex w-full max-w-4xl bg-white rounded-lg shadow-lg overflow-hidden">
+                <div className="flex w-full max-w-4xl bg-white rounded-lg shadow-lg overflow-hidden ">
                   {/* Form Section */}
-                  <div className="flex flex-col w-1/2 p-8">
+                  <div className="flex flex-col w-1/2 p-8 ">
                     <h2 className="text-2xl font-semibold mb-4">Chat to our team</h2>
 
-                    <p className="text-gray-600 mb-6">Need help with something? Want a demo? Get in touch with our friendly team and we'll get in touch within 2 hours.</p>
+                    <p className="text-gray-600 mb-6 text-[14px]">Need help with something? Want a demo? Get in touch <br/> with our friendly team and we'll get in touch within 2 hours.</p>
                     <form className="space-y-4 " >
 
                       <div className="flex space-x-6 items-center ">
-                        <div className="border-b">
-                            <input type="text" placeholder="First name" className="w-1/2 p-3 appearance-none bg-transparent border-none " />
-                            <input type="text" placeholder="Last name" className="w-1/2 p-3 appearance-none bg-transparent border-none border-b" />
+                        <div className="flex space-x-4 items-center">
+                            <input type="text" placeholder="First name" className="w-1/2 pb-3 pt-3 appearance-none bg-transparent border border-transparent border-b-gray-300 " />
+                            <input type="text" placeholder="Last name" className="w-1/2 pb-3 pt-3  appearance-none bg-transparent border border-transparent border-b-gray-300 " />
                         </div>
-
-                       
                         
                       </div>
 
-                       <div className=" border-b">
-                          <input type="text" placeholder="Job title" className="w-full p-3 appearance-none bg-transparent border-none" />  
+                       <div className=" ">
+                          <input type="text" placeholder="Job title" className="w-full pb-3 pt-3  appearance-none bg-transparent border border-transparent border-b-gray-300 " />  
                        </div > 
-                       <div className="border-b">
-                          <input type="email" placeholder="Work email" className="w-full p-3 appearance-none bg-transparent border-none" />
+                       <div className="">
+                          <input type="email" placeholder="Work email" className="w-full pb-3 pt-3  appearance-none bg-transparent border border-transparent border-b-gray-300 " />
                        </div>
 
-                      <div className="flex space-x-4 items-center border-b">
+                      <div className="flex space-x-4 items-center border border-transparent  border-b-gray-300  ">
                         <span className="text-gray-600">US</span>
-                        <input type="tel" placeholder="+1 (555) 000-0000" className="w-full p-3 appearance-none bg-transparent border-none" />
-                      </div>
-
-                   
-
-                     
+                        <input type="tel" placeholder="+1 (555) 000-0000" className="w-full pb-3 pt-3  appearance-none bg-transparent " />
+                      </div>                     
                     </form>
+
                     {/* FormApp Section */}
                     <FormApp />
                   </div>
