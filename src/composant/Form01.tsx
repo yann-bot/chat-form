@@ -1,87 +1,61 @@
+import { FaRegCircle } from 'react-icons/fa';
+import image from '../assets/images/Amelie Laurent.webp';
+import { FormApp } from './FormApp';
 
-import { FcCdLogo } from "react-icons/fc";
-import logo  from './image.jpg'
-import { FormApp } from './FormApp'
+export default function Form01() {
+  return (
+    <div className="flex min-h-screen items-center justify-center bg-gray-100 p-6">
+      <div className="flex w-full max-w-5xl bg-white rounded-lg shadow-lg overflow-hidden">
 
+        {/* Form Section */}
 
+        <div className="w-1/2 p-6">
+          <h2 className="text-2xl font-semibold mb-4">Chat to our team</h2>
+          <p className="text-gray-600 mb-6 text-sm">
+            Need help with something? Want a demo? Get in touch <br />
+            with our friendly team and we'll get in touch within 2 hours.
+          </p>
 
+          <form className="space-y-4">
+            <div className="flex space-x-4">
+              <input type="text" placeholder="First name" className="w-1/2 border-b border-gray-300 p-3 outline-none focus:border-gray-500" />
+              <input type="text" placeholder="Last name" className="w-1/2 border-b border-gray-300 p-3 outline-none focus:border-gray-500" />
+            </div>
+            <input type="text" placeholder="Job title" className="w-full border-b border-gray-300 p-3 outline-none focus:border-gray-500" />
+            <input type="email" placeholder="Work email" className="w-full border-b border-gray-300 p-3 outline-none focus:border-gray-500" />
+            <div className="flex items-center border-b border-gray-300 p-3">
+              <span className="text-gray-600 mr-3">US</span>
+              <input type="tel" placeholder="+1 (555) 000-0000" className="w-full outline-none" />
+            </div>
+          </form>
 
-export default function Form01(){
+          {/* FormApp Section */}
 
+          <FormApp />
+        </div>
 
-    return  (
-      <div className="flex min-h-screen items-center justify-center bg-gray-100 p-6">
-                <div className="flex w-full max-w-4xl bg-white rounded-lg shadow-lg overflow-hidden ">
-                  {/* Form Section */}
-                  <div className="flex flex-col w-1/2 p-8 ">
-                    <h2 className="text-2xl font-semibold mb-4">Chat to our team</h2>
+        {/* Image Section */}
 
-                    <p className="text-gray-600 mb-6 text-[14px]">Need help with something? Want a demo? Get in touch <br/> with our friendly team and we'll get in touch within 2 hours.</p>
-                    <form className="space-y-4 " >
-
-                      <div className="flex space-x-6 items-center ">
-                        <div className="flex space-x-4 items-center">
-                            <input type="text" placeholder="First name" className="w-1/2 pb-3 pt-3 appearance-none bg-transparent border border-transparent border-b-gray-300 " />
-                            <input type="text" placeholder="Last name" className="w-1/2 pb-3 pt-3  appearance-none bg-transparent border border-transparent border-b-gray-300 " />
-                        </div>
-                        
-                      </div>
-
-                       <div className=" ">
-                          <input type="text" placeholder="Job title" className="w-full pb-3 pt-3  appearance-none bg-transparent border border-transparent border-b-gray-300 " />  
-                       </div > 
-                       <div className="">
-                          <input type="email" placeholder="Work email" className="w-full pb-3 pt-3  appearance-none bg-transparent border border-transparent border-b-gray-300 " />
-                       </div>
-
-                      <div className="flex space-x-4 items-center border border-transparent  border-b-gray-300  ">
-                        <span className="text-gray-600">US</span>
-                        <input type="tel" placeholder="+1 (555) 000-0000" className="w-full pb-3 pt-3  appearance-none bg-transparent " />
-                      </div>                     
-                    </form>
-
-                    {/* FormApp Section */}
-                    <FormApp />
-                  </div>
-
-                  {/* Image Section */}
-                 
-                  <div className="w-1/2 relative">
-                 
-                    <img 
-                      src={logo} 
-                      alt="business team" 
-                      className="w-full h-full object-cover"
-                    />
-                    
-                    <div className="absolute inset-0 bg-gradient-to- flex justify-around ">
-                        <div className="flex justify-around">
-                            <h3>
-                                <FcCdLogo/>
-                                  Logo
-                            </h3> 
-                          
-                        </div>
-                    </div>
-
-                    <div className="absolute bottom-6 left-6 text-white">
-                            <h3 className="text-lg font-semibold">Untitled UI</h3>
-                            <p className="mt-2">Untitled’s software helps us manage cash flow, financial reporting, and payroll with ease. It's a great solution for startups looking for an efficient way to manage their finances all-in-one.</p>
-                    <div className="flex justify-between ">
-                        <div>
-                            <p className="mt-2 font-semibold">Maya Rothwell</p>
-                            <p className="text-sm">Founder & CEO</p>
-                        </div>
-
-                        <div>
-                            Openvertus
-                        </div>
-                    </div>
+        <div className="w-1/2 relative bg-gray-400 m-1 rounded-2xl">
+          <h1 className="text-lg text-white font-bold mx-8 my-4">Untitled UI</h1>
+          <img src={image} alt="business team" className="h-full w-full object-cover" />
+          <div className="absolute inset-0  bg-opacity-30 flex flex-col justify-end p-6 text-white">
+            <p className="mt-4 text-normal font-bold">
+              Untitled’s software helps us manage cash flow, financial reporting, and payroll with ease. It's a great solution for startups looking for an efficient way to manage their finances all-in-one.
+            </p>
+            <div className="flex items-center justify-between mt-4">
+              <div>
+                <h3 className="font-semibold">Maya Rothwell</h3>
+                <h4 className="text-sm">Founder & CEO</h4>
+              </div>
+              <div className="flex items-center">
+                <FaRegCircle className="mr-2" />
+                <h3 className="font-semibold">Open Ventures</h3>
+              </div>
+            </div>
           </div>
-             </div>
-           </div>
-         </div> 
-    )
-    
-
+        </div>
+      </div>
+    </div>
+  );
 }
