@@ -32,7 +32,7 @@ import { ButtonIcon } from "./Form"
 
             {/*Button de validation  */}
 
-            <button className="border rounded-md mt-6 text-white pt-2 pb-2 bg-blue-600">Get in touch</button>
+            <button className="border rounded-[10px] mt-6 text-white pt-2 pb-2 bg-blue-600">Get in touch</button>
         </div>
         </div>
     )
