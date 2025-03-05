@@ -14,8 +14,7 @@ const PhoneNumberInput = () => {
       value={phoneNumber}
       onChange={(phone) => setPhoneNumber(phone)}
       inputStyle={{
-        // Supprime la bordure
-        border: "none", // Supprime le padding à gauche
+        border: "none", 
       }}
     />
   );
