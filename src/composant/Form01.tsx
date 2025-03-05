@@ -31,37 +31,10 @@ const schema = z.object({
 });
 
 export default function Form01() {
-  const [errors, setErrors] = useState<FormErrors>({});
-
-    const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-      event.preventDefault();
-      {/* Utilisation de l'objet FormData pour collecter facilement les données du formulaire
-          Remarquez que l'attribut a été ajouté pour chaque champ du formulaire
-        */}
-      const formData = new FormData(event.target as HTMLFormElement);
-      const data = {
-        firstName: formData.get('firstName'),
-        lastName: formData.get('lastName'),
-        jobTitle: formData.get('jobTitle'),
-        email: formData.get('email'),
-        phoneNumber: formData.get('phoneNumber'),
-      };
-
-      const result = schema.safeParse(data);
-      if (!result.success) {
-        const fieldErrors = result.error.format();
-        setErrors(fieldErrors);
-      } else {
-        setErrors({});
-
-        console.log("Form data:", data);
-      }
-    };
-
-    return (
-      
-      <div className="flex min-h-screen items-center justify-center bg-gray-100 p-6">
-        <div className="flex w-full max-w-5xl bg-white rounded-lg shadow-lg overflow-hidden">
+ 
+  return (
+    <div className="flex min-h-screen items-center justify-center bg-gray-100 p-6">
+      <div className="flex w-full max-w-5xl bg-white rounded-lg shadow-lg overflow-hidden">
 
           {/* Form Section */}
 
@@ -105,27 +78,26 @@ export default function Form01() {
 
           {/* Image Section */}
 
-          <div className="w-1/2 relative bg-gray-400 m-1 rounded-2xl">
-            <h1 className="text-lg text-white font-bold mx-8 my-4">Untitled UI</h1>
-            <img src={image} alt="business team" className="h-full w-full object-cover" />
-            <div className="absolute inset-0  bg-opacity-30 flex flex-col justify-end p-6 text-white">
-              <p className="mt-4 text-normal font-bold">
-                Untitled’s software helps us manage cash flow, financial reporting, and payroll with ease. It's a great solution for startups looking for an efficient way to manage their finances all-in-one.
-              </p>
-              <div className="flex items-center justify-between mt-4">
-                <div>
-                  <h3 className="font-semibold">Maya Rothwell</h3>
-                  <h4 className="text-sm">Founder & CEO</h4>
-                </div>
-                <div className="flex items-center">
-                  <FaRegCircle className="mr-2" />
-                  <h3 className="font-semibold">Open Ventures</h3>
-                </div>
+        <div className="w-1/2 relative bg-gray-400 m-1 rounded-2xl">
+          <h1 className="text-lg text-white font-bold mx-8 my-4">Untitled UI</h1>
+          <img src={image} alt="business team" className=" h-full w-full object-cover " />
+          <div className="absolute inset-0  bg-opacity-30 flex flex-col justify-end p-6 text-white">
+            <p className="mt-4 text-normal font-bold">
+              Untitled’s software helps us manage cash flow, financial reporting, and payroll with ease. It's a great solution for startups looking for an efficient way to manage their finances all-in-one.
+            </p>
+            <div className="flex items-center justify-between mt-4">
+              <div>
+                <h3 className="font-semibold">Maya Rothwell</h3>
+                <h4 className="text-sm">Founder & CEO</h4>
+              </div>
+              <div className="flex items-center">
+                <FaRegCircle className="mr-2" />
+                <h3 className="font-semibold">Open Ventures</h3>
               </div>
             </div>
           </div>
         </div>
       </div>
-    );
-  }
-
+    </div>
+  );
+}
