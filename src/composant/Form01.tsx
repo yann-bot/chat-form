@@ -105,11 +105,11 @@ export default function Form01() {
 
           {/* Image Section */}
 
-          <div className="w-1/2 relative bg-gray-400 m-1  rounded-2xl">
+          <div className="w-1/2 relative bg-gray-400 m-1  overflow-hidden rounded-2xl">
             <h1 className="text-lg text-white font-bold mx-8 my-4">Untitled UI</h1>
             <img src={image} alt="business team" className="h-full w-full object-cover" />
             <div className="absolute inset-0  bg-opacity-30 flex flex-col justify-end p-6 text-white">
-              <p className="mt-4 text-normal font-bold">
+              <p className="mt-4 text-xl font-bold">
                 Untitled’s software helps us manage cash flow, financial reporting, and payroll with ease. It's a great solution for startups looking for an efficient way to manage their finances all-in-one.
               </p>
               <div className="flex items-center justify-between mt-4">
