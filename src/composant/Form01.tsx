@@ -3,6 +3,7 @@ import image from '../assets/images/Amelie Laurent.webp';
 import { FormApp } from './FormApp';
 import PhoneNumberInput from './PhoneNum';
 import { useState } from 'react';
+import { z } from 'zod';
 
 {/* Création d'interface pour éviter les erreurs de types*/}
 
@@ -13,7 +14,7 @@ interface FormErrors {
   email?: { _errors: string[] };
   phoneNumber?: { _errors: string[] };
 }
-import { z } from 'zod';
+
 
 
 {/* 
