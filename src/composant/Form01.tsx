@@ -1,8 +1,10 @@
 import { FaRegCircle } from 'react-icons/fa';
 import image from '../assets/images/Amelie Laurent.webp';
-import { FormApp } from './FormApp';
 import PhoneNumberInput from './PhoneNum';
 import { useState } from 'react';
+import { GoOrganization, GoPerson } from "react-icons/go"
+import { ButtonIcon } from "./Form"
+
 
 {/* Création d'interface pour éviter les erreurs de types*/}
 
@@ -95,12 +97,35 @@ export default function Form01() {
                 <PhoneNumberInput  />
                 {errors.phoneNumber && <p className="text-red-500 text-sm">{errors.phoneNumber._errors[0]}</p>}
               </div>
-            
+
+              <div>
+              <h2 className="font-bold mt-8 mb-2">Number of employees</h2>
+              <ButtonIcon 
+                icon={<GoPerson />} 
+                title="I'm a solo creator" 
+                paragraph="I need to set up an account for myself." 
+              />
+              </div>
+             
+               {/*Button 2 */}
+               <div>
+
+                <ButtonIcon 
+                  icon={<GoOrganization />} 
+                  title="I'm part of a team" 
+                  paragraph="I need to set up an account for my team."
+                />
+               </div>
+              
+            <div>
+            <button type='submit' className="border w-full rounded-[10px] mt-6 text-white pt-2 pb-2 bg-blue-600">Get in touch</button>
+            </div>
+
             </form>
 
             {/* FormApp Section */}
 
-            <FormApp />
+           
           </div>
 
           {/* Image Section */}
