@@ -3,7 +3,7 @@ import image from '../assets/images/Amelie Laurent.webp';
 import PhoneNumberInput from './PhoneNum';
 import { useState } from 'react';
 import { z } from 'zod';
-import { GoOrganization, GoPerson } from "react-icons/go"
+import { AiOutlineTeam, GoPerson } from "react-icons/go"
 import { ButtonIcon } from "./Form"
 
 
@@ -112,7 +112,7 @@ export default function Form01() {
                <div>
 
                 <ButtonIcon 
-                  icon={<GoOrganization />} 
+                  icon={<AiOutlineTeam />} 
                   title="I'm part of a team" 
                   paragraph="I need to set up an account for my team."
                 />
