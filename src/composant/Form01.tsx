@@ -3,8 +3,9 @@ import image from '../assets/images/Amelie Laurent.webp';
 import PhoneNumberInput from './PhoneNum';
 import { useState } from 'react';
 import { z } from 'zod';
-import { AiOutlineTeam, GoPerson } from "react-icons/go"
-import { ButtonIcon } from "./Form"
+import { GoPerson } from "react-icons/go"
+import { AiOutlineTeam } from "react-icons/ai"
+import { ButtonIcon } from "./Bouton.tsx"
 
 
 {/* Création d'interface pour éviter les erreurs de types*/}
@@ -63,15 +64,15 @@ export default function Form01() {
 
     return (
       
-      <div className="flex min-h-screen items-center justify-center bg-gray-100 p-6">
-        <div className="flex w-full max-w-5xl bg-white rounded-lg shadow-lg overflow-hidden">
+      <div className="flex min-h-screen w-screen items-center justify-center  bg-gray-100 p-5 ">
+        <div className="flex flex-col sm:flex-row w-full max-w-none bg-white rounded-lg shadow-lg overflow-hidden">
 
           {/* Form Section */}
 
-          <div className="w-1/2 p-[80px]">
-            <h2 className="text-2xl font-semibold mb-4 ">Chat to our team</h2>
-            <p className="text-gray-600 mb-6 text-sm">
-              Need help with something? Want a demo? Get in touch <br />
+          <div className="w-full sm:w-1/2 p-[40px] sm:p-[100px]">
+            <h2 className="text-2xl font-semibold mb-4 sm:text-3xl">Chat to our team</h2>
+            <p className="text-gray-600 text-[14px] mb-6 sm:text-lg">
+              Need help with something? Want a demo? Get in touch 
               with our friendly team and we'll get in touch within 2 hours.
             </p>
 
@@ -94,22 +95,23 @@ export default function Form01() {
                 <input type="email" name="email" placeholder="Work email" className="w-full border-b border-gray-300 p-3 pl-0 outline-none focus:border-gray-500" />
                 {errors.email && <p className="text-red-500 text-sm">{errors.email._errors[0]}</p>}
               </div>
-              <div className="flex items-center border-b border-gray-300 p-3 pl-3">
+              <div className="flex  items-center border-b border-gray-300 p-3 pl-3">
                 <PhoneNumberInput  />
                 {errors.phoneNumber && <p className="text-red-500 text-sm">{errors.phoneNumber._errors[0]}</p>}
               </div>
 
               <div>
               <h2 className="font-bold mt-8 mb-2">Number of employees</h2>
+              <div className="flex flex-col gap-3">
               <ButtonIcon 
                 icon={<GoPerson />} 
                 title="I'm a solo creator" 
                 paragraph="I need to set up an account for myself." 
               />
-              </div>
+              
              
                {/*Button 2 */}
-               <div>
+               
 
                 <ButtonIcon 
                   icon={<AiOutlineTeam />} 
@@ -117,9 +119,9 @@ export default function Form01() {
                   paragraph="I need to set up an account for my team."
                 />
                </div>
-              
+              </div>
             <div>
-            <button type='submit' className="border w-full rounded-[10px] mt-6 text-white pt-2 pb-2 bg-blue-600">Get in touch</button>
+            <button type='submit' className="border w-full rounded-[10px] mt-6 text-white pt-2 pb-2 bg-blue-600 hover:bg-blue-800 ">Get in touch</button>
             </div>
 
             </form>
@@ -131,21 +133,21 @@ export default function Form01() {
 
           {/* Image Section */}
 
-          <div className="w-1/2 relative bg-gray-400 m-1  overflow-hidden rounded-2xl">
-            <h1 className="text-lg text-white font-bold mx-8 my-4">Untitled UI</h1>
+          <div className="hidden sm:block w-2/3 relative bg-gray-400 m-1 overflow-hidden rounded-2xl">
+            <h1 className="text-2xl text-white font-bold mx-8 my-4">Untitled UI</h1>
             <img src={image} alt="business team" className="h-full w-full object-cover" />
             <div className="absolute inset-0  bg-opacity-30 flex flex-col justify-end p-6 text-white">
-              <p className="mt-4 text-xl font-bold">
+              <p className="mt-4 text-xl font-bold sm:text-3xl">
                 Untitled’s software helps us manage cash flow, financial reporting, and payroll with ease. It's a great solution for startups looking for an efficient way to manage their finances all-in-one.
               </p>
               <div className="flex items-center justify-between mt-4">
                 <div>
-                  <h3 className="font-semibold">Maya Rothwell</h3>
-                  <h4 className="text-sm">Founder & CEO</h4>
+                  <h3 className="font-semibold sm:text-xl">Maya Rothwell</h3>
+                  <h4 className="text-sm sm:text-xl">Founder & CEO</h4>
                 </div>
                 <div className="flex items-center">
                   <FaRegCircle className="mr-2" />
-                  <h3 className="font-semibold">Open Ventures</h3>
+                  <h3 className="font-semibold sm:text-xl">Open Ventures</h3>
                 </div>
               </div>
             </div>
